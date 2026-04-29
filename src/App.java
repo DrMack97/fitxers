@@ -4,10 +4,6 @@ import java.util.Arrays;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        
-        
-                
-
                 // SRC / FOLDER1 
                 //     / FODLER2 
 
@@ -28,14 +24,16 @@ public class App {
                     if (args.length == 2) {
                         pathName += args[1]; 
                     }
+
                 // -a path absolute   
                 }else if (args[0].equalsIgnoreCase("-a")) {
                     if (args.length == 2) {
                         pathName = args[1];
                     }else{
-                        System.out.println("Missing absolute path");
 
+                        System.out.println("Missing absolute path");
                         execute = false;
+                        
                     }
                     
                 }else if(args[0].equalsIgnoreCase("-h")) {
@@ -45,8 +43,6 @@ public class App {
 
                 }
             }
-
-        
             //clase *File*
 
         System.out.println("");
