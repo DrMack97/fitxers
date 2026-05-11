@@ -92,7 +92,7 @@ public class Dialog {
         Scanner sc = new Scanner(System.in); // para el ENTER
 
         try (BufferedReader br1 = new BufferedReader(new FileReader(diag1));
-                BufferedReader br2 = new BufferedReader(new FileReader(diag2))) {
+            BufferedReader br2 = new BufferedReader(new FileReader(diag2))) {
 
             String linea1, linea2;
 
