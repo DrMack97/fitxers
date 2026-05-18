@@ -1,13 +1,18 @@
 package UX.BMI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 
-public class BMIFrame extends JFrame {
+public class BMIFrame extends JFrame implements ActionListener {
 
-    BMIPanel bmiPanel;
+    private JPanel bmiPanel;
+    private ActionListener 
 
     public BMIFrame(){
         initComponets();
@@ -35,7 +40,7 @@ public class BMIFrame extends JFrame {
         JMenu     menu;
         JMenuItem menuItem;
 
-        menu = new JMenu("File");   //Construye
+        menu = new JMenu("Help");   //Construye
 
         menuItem = new JMenuItem("Exit");
         menuItem.setActionCommand("Exit");
@@ -52,7 +57,7 @@ public class BMIFrame extends JFrame {
 
 
         //TODO add listener
-
+        menuItem.Acti
         // Agrega
 
         menu.add(menuItem); // menu particular 
@@ -63,4 +68,30 @@ public class BMIFrame extends JFrame {
 
         //FIX: no se 
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+       String command = e.getActionCommand();
+
+       switch (command) {
+        case "bmi":
+                displaywelcome();
+            break;
+       
+        default:
+            break;
+       }
+    }
+
+    private void displaywelcome() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'displaywelcome'");
+    }
+
+    private void displayBmi(){
+        mainPanel = new BMIPanel();
+        setContentPane(mainPanel);
+        validate();
+    }
+
 }

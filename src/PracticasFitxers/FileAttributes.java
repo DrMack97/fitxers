@@ -1,3 +1,4 @@
+package PracticasFitxers;
 import java.io.*;
 /**
  * FileAttributes.java
